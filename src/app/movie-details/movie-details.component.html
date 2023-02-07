@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img [src]="baseUrl + movieDetails.poster_path" alt="" class="w-100">
+    </div>
+    <div class="col-md-8">
+      <div class="items">
+        <h4>{{movieDetails.title}}</h4>
+        <p class="text-muted">{{movieDetails.tagline}}</p>
+        <div class="d-flex mb-5">
+          <p class="bg-info mx-1 p-2 rounded" *ngFor="let genr of movieDetails.genres">{{genr.name}}</p>
+        </div>
+        <div class="mb-5">
+          <p>Vote: {{movieDetails.vote_average}}</p>
+          <p>Vote Count: {{movieDetails.vote_count}}</p>
+          <p>Popularity: {{movieDetails.popularity}}</p>
+          <p>Release Date: {{movieDetails.release_date}}</p>
+        </div>
+        <p id="movieDetalsHtml">{{movieDetails.overview}}</p>
+      </div>
+    </div>
+  </div>
+</div>

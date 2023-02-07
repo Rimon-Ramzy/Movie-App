@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    <h4>{{errorMessage}}</h4>
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <label for="email" class="mb-2">Email</label>
+    <input type="text" id="email" class="form-control mb-3" formControlName="email">
+    <div class="alert alert-danger" *ngIf="controlName['email'].errors && controlName['email'].touched">
+      <p class="mb-0" *ngIf="controlName['email'].errors?.['required']">Email Is Required</p>
+      <p class="mb-0" *ngIf="controlName['email'].errors?.['email']">Email Is Not Valid</p>
+    </div>
+
+    <label for="password" class="mb-2">Password</label>
+    <input type="password" id="password" class="form-control mb-3" formControlName="password">
+    <div class="alert alert-danger" *ngIf="controlName['password'].errors && controlName['password'].touched">
+      <p class="mb-0" *ngIf="controlName['password'].errors?.['required']">Password Is Required</p>
+      <p class="mb-0" *ngIf="controlName['password'].errors?.['pattern']">Pattern Not Match</p>
+    </div>
+
+    <button [disabled]="loginForm.invalid" type="submit" class="btn btn-info">
+      Login
+      <i class="fas fa-spinner fa-spin" *ngIf="fireLogin"></i>
+    </button>
+  </form>
+
+</div>

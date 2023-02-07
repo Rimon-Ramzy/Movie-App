@@ -1,0 +1,69 @@
+<div class="container">
+  <nav class="d-flex justify-content-between py-5">
+    <div class="d-flex align-items-center">
+      <div class="logo me-5">
+        <img src="./../../assets/logo-dark.webp" alt="Logo" class="img-fluid">
+      </div>
+      <!-- <ul class="list-unstyled mb-0 d-flex" *ngIf="islogin2"> -->
+      <ul class="list-unstyled mb-0 d-flex">
+        <li class="me-3">
+          <a routerLink="home" routerLinkActive="router-active">Home</a>
+        </li>
+        <li class="me-3">
+          <a routerLink="about" routerLinkActive="router-active">About</a>
+        </li>
+        <li class="me-3">
+          <a routerLink="contact" routerLinkActive="router-active">Contact</a>
+        </li>
+        <li class="me-3">
+          <a routerLink="movies" routerLinkActive="router-active">Movies</a>
+        </li>
+        <li>
+          <a routerLink="network" routerLinkActive="router-active">Network</a>
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center">
+      <ul class="list-unstyled mb-0 d-flex">
+        <li class="me-3">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li class="me-3">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li class="me-3">
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+        <li class="me-3">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+      </ul>
+      <!-- <ul class="list-unstyled mb-0 d-flex" *ngIf="!isLogin"> -->
+      <ul class="list-unstyled mb-0 d-flex">
+        <li class="me-3">
+          <a routerLink="login" routerLinkActive="router-active">Login</a>
+        </li>
+        <li>
+          <a routerLink="register" routerLinkActive="router-active">Register</a>
+        </li>
+      </ul>
+      <!-- <ul class="list-unstyled mb-0 d-flex" *ngIf="isLogin"> -->
+      <ul class="list-unstyled mb-0 d-flex">
+        <li class="nav-item dropdown me-2">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Setting
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="settings/profile">Profile</a></li>
+            <li><a class="dropdown-item" routerLink="settings/privacy">Privacy</a></li>
+          </ul>
+        </li>
+        <li class="me-3">
+          <span (click)="fireLogin()" routerLinkActive="router-active">Logout</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</div>
